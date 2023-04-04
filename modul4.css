@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 70px;
+    background-color: #08596A;
+}
+header h2{
+    font-size: 50px;
+    display: inline-block;
+    padding: 5px 24px;
+    font-style: italic;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    padding: 24px;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+header ul li a:hover{
+    color: brown;
+}
+.nav::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 18px;
+}
+#check{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgb(16, 47, 80);
+    transition: .3s;
+    
+}
+.sidebar ul li a{
+    color: white;
+}
+.sidebar ul li {
+    padding: 24px;
+}
+.sidebar ul li:hover{
+    background-color: pink;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+@media (max-width:750px){
+    .mobile-menu{
+        display: block;
+    }
+    header ul{
+        display: none;
+    }
+
+}
+@media (min-width:899px){
+    .sidebar{
+        display: none;
+    }
+}
+@media (min-width:900px){
+    .sidebar{
+        display: none;
+    }
+}
+.banner{
+    padding: 0px 0px 500px 100px;
+    background: url(gambar1.jpeg);
+    background-size: cover;
+    text-align: center;
+    padding: 200px 100px;
+} 
+div h1{
+    font-size: 96px;
+    opacity: 0.8;
+    
+}
+.container p{
+    font-size: 20px;
+    padding: 0;
+    font-style: oblique;
+}
+.judul h2{
+    color:white;
+    padding: 50px;
+    font-size: 40px;
+    background-color:#08596A;
+}
+.tagline{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  top: 55%;
+  left: 73%;
+}
+.tagline p{
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  text-align: left;
+  color:  #08596A;
+}
+.down{
+  position: absolute;
+  top: 50%;
+  left:36%;
+  transform: translate(-50%,-50%);
+}
+.down img{
+  width: 50%;
+  padding-right: 80px;
+  
+    
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    padding: 0px 100px 0px ;
+    margin: 50px 0;
+    display: grid; 
+}
+.gallery img{
+    object-fit: cover;
+    border: 1px solid white;
+    box-shadow: 1px 2px 3px white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.gallery h4{
+    color: black;
+}
+footer{
+    padding: 50px;
+    background-color: gray;
+    height: 220px;
+    color: white;
+    font-size: 20px;
+}
+.buttonToTop{
+    width: 30px;
+    background-color: gray;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
